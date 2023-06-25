@@ -16,7 +16,6 @@ const Card = ({job}) => {
                 <span className="job-info">{job.timing}</span>
                 <span className="job-info">-</span>
                 <span className="job-info">{job.location}</span>
-                  {/* -  {job.timing}  -  {job.location}</span> */}
             </div>
             <div className="tags">
                 {job.keywords.map((keyword, index) => {
@@ -24,7 +23,6 @@ const Card = ({job}) => {
                 })}
             </div>
         </div>
-
     </div>
   )
 }
