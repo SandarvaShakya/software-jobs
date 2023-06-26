@@ -39,7 +39,7 @@ const App = () => {
   return (
     <main>
       <Header />
-      <TagBar />
+      {tags.length > 0 && <TagBar />}
       <div className="cards">
           {filteredJobData.map((job, index) => (
               <Card key={index} job={job} />
