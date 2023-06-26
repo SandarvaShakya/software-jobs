@@ -3,7 +3,6 @@ import './App.css';
 import axios from 'axios'
 import Card from './components/Card';
 import Header from './components/Header';
-import TagProvider from './components/TagContext';
 import TagBar from './components/TagBar';
 
 const base_url = 'https://storage.googleapis.com/programiz-static/hiring/software/job-listing-page-challenge/data.json'
@@ -18,23 +17,21 @@ const App = () => {
     request.then(response => {
       setJobData(response.data)
     })
-  })
+  }, [])
 
   return (
-    <TagProvider>
-      <main>
-        <Header />
-        <TagBar />
-        <div className="cards">
-          {jobData.map((job, index) => {
-            return <Card
-              key={index}
-              job={job}
-            />
-          })}
-        </div>
-      </main>
-    </TagProvider>
+    <main>
+      <Header />
+      <TagBar />
+      <div className="cards">
+        {jobData.map((job, index) => {
+          return <Card
+            key={index}
+            job={job}
+          />
+        })}
+      </div>
+    </main>
   )
 }
 
