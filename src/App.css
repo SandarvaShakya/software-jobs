@@ -70,12 +70,6 @@ img{
   border-radius: 8px;
 }
 
-.tag:hover{
-  color: #fff;
-  background-color: var(--color-primary);
-  cursor: pointer;
-}
-
 .card{
   background-color: #fff;
   border-radius: 8px;
@@ -206,5 +200,11 @@ img{
   .card-content{
     width: 90%;
     display: flex;
+  }
+
+  .tag:hover{
+    color: #fff;
+    background-color: var(--color-primary);
+    cursor: pointer;
   }
 }
